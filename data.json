@@ -1,0 +1,16 @@
+[{
+  "year": "1994",
+  "cars": 1587,
+  "motorcycles": 650,
+  "bicycles": 121
+}, {
+  "year": "1995",
+  "cars": 1567,
+  "motorcycles": 683,
+  "bicycles": 146
+}, {
+  "year": "1996",
+  "cars": 1167,
+  "motorcycles": 1683,
+  "bicycles": 1416
+}]

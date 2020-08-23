@@ -1,8 +1,16 @@
 package main
 
 func main() {
-	TestPgxDatabase()
-	FaceDetectionHtmlWithStaticFilesAndHttpRouter()
+	//TestPgxDatabase()
+	//FaceDetectionHtmlWithStaticFilesAndHttpRouter()
+	//HttpRouterAuthentication()
+	//Channels()
+	//Siemens()
+	//Directories()
+	//Odata()
+	//Sorting()
+	//Mssql()
+	//AmchartsSample()
+	//ServiceTest()
+	UpdateAndCreate()
 }
-
-
