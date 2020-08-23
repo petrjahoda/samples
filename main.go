@@ -12,5 +12,6 @@ func main() {
 	//Mssql()
 	//AmchartsSample()
 	//ServiceTest()
-	UpdateAndCreate()
+	//UpdateAndCreate()
+	RompaRfidConverter()
 }
