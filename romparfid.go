@@ -8,6 +8,7 @@ import (
 func RompaRfidConverter() {
 	originalRFIDString := "ed0004b1ae"
 	var convertedString = MakeConversion(originalRFIDString)
+	println("result should be 186455 ")
 	println(originalRFIDString + " - " + strconv.Itoa(int(convertedString)))
 
 }

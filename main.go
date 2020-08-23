@@ -13,5 +13,6 @@ func main() {
 	//AmchartsSample()
 	//ServiceTest()
 	//UpdateAndCreate()
-	RompaRfidConverter()
+	//RompaRfidConverter()
+	Beep()
 }
