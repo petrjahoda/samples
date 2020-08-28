@@ -14,5 +14,7 @@ func main() {
 	//ServiceTest()
 	//UpdateAndCreate()
 	//RompaRfidConverter()
-	Beep()
+	//Beep()
+	//Samba()
+	ListFilesInDirectory()
 }
