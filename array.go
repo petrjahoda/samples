@@ -9,7 +9,7 @@ func arrayOverflow() {
 func printOverflow(primes []int, i int) {
 	defer func() {
 		if err := recover(); err != nil {
-			println("Index out of range while printing")
+			println("index out of range while printing")
 		}
 	}()
 	println(primes[i])

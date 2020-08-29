@@ -13,24 +13,24 @@ var (
 
 func channels() {
 	channel := make(chan string)
-	go AddToChannel(1, channel)
-	go AddToChannel(2, channel)
-	go AddToChannel(3, channel)
-	go AddToChannel(4, channel)
-	go AddToChannel(5, channel)
-	go AddToChannel(6, channel)
-	go AddToChannel(7, channel)
-	go AddToChannel(8, channel)
-	go AddToChannel(9, channel)
-	go AddToChannel(10, channel)
+	go addToChannel(1, channel)
+	go addToChannel(2, channel)
+	go addToChannel(3, channel)
+	go addToChannel(4, channel)
+	go addToChannel(5, channel)
+	go addToChannel(6, channel)
+	go addToChannel(7, channel)
+	go addToChannel(8, channel)
+	go addToChannel(9, channel)
+	go addToChannel(10, channel)
 	println("here")
-	go CloseChannel(channel)
+	go closeChannel(channel)
 	for data := range channel {
 		println(data)
 	}
 }
 
-func CloseChannel(channel chan string) {
+func closeChannel(channel chan string) {
 	for {
 		time.Sleep(1 * time.Second)
 		if openRoutines == 0 {
@@ -41,7 +41,7 @@ func CloseChannel(channel chan string) {
 	}
 }
 
-func AddToChannel(routineNumber int, channel chan string) {
+func addToChannel(routineNumber int, channel chan string) {
 	counter.Lock()
 	openRoutines++
 	counter.Unlock()

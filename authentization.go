@@ -13,13 +13,13 @@ func httpRouterAuthentication() {
 	user := []byte("gordon")
 	pass := []byte("secret!")
 	router := httprouter.New()
-	router.GET("/", Index)
-	router.GET("/protected/", BasicAuth(Protected, user, pass))
-	router.GET("/new/", BasicAuth(New, user, pass))
+	router.GET("/", index)
+	router.GET("/protected/", basicAuth(protected, user, pass))
+	router.GET("/new/", basicAuth(newPage, user, pass))
 	_ = http.ListenAndServe(":8080", router)
 }
 
-func BasicAuth(h httprouter.Handle, user, pass []byte) httprouter.Handle {
+func basicAuth(h httprouter.Handle, user, pass []byte) httprouter.Handle {
 	return func(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 		const basicAuthPrefix string = "Basic "
 		auth := r.Header.Get("Authorization")
@@ -38,14 +38,14 @@ func BasicAuth(h httprouter.Handle, user, pass []byte) httprouter.Handle {
 	}
 }
 
-func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+func index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	_, _ = fmt.Fprint(w, "Not protected!\n")
 }
 
-func Protected(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	_, _ = fmt.Fprint(w, "Protected!\n")
+func protected(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+	_, _ = fmt.Fprint(w, "protected!\n")
 }
 
-func New(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	_, _ = fmt.Fprint(w, "New!\n")
+func newPage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+	_, _ = fmt.Fprint(w, "new!\n")
 }

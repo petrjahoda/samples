@@ -7,20 +7,20 @@ import (
 
 func rompaRfidConverter() {
 	originalRFIDString := "ed0004b1ae"
-	var convertedString = MakeConversion(originalRFIDString)
+	var convertedString = makeConversion(originalRFIDString)
 	println("result should be 186455 ")
 	println(originalRFIDString + " - " + strconv.Itoa(int(convertedString)))
 
 }
 
-func MakeConversion(originalData string) int64 {
+func makeConversion(originalData string) int64 {
 	shortenedData := strings.ToUpper(originalData[len(originalData)-6:])
-	convertedData := ConvertHexData(shortenedData)
+	convertedData := convertHexData(shortenedData)
 	finalData, _ := strconv.ParseInt(convertedData, 16, 64)
 	return finalData
 }
 
-func ConvertHexData(hexData string) string {
+func convertHexData(hexData string) string {
 	originalData := "0123456789ABCDEF"
 	replacementData := "084C2A6E195D3B7F"
 	var finalString string

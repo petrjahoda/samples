@@ -9,11 +9,11 @@ import (
 )
 
 func updateAndCreate() {
-	UpdateMain()
-	UpdateCreate()
+	updateMain()
+	updateCreate()
 }
 
-func UpdateCreate() {
+func updateCreate() {
 	readFile, err := ioutil.ReadFile("create.sh")
 	if err != nil {
 		println("Error reading create.sh")
@@ -49,7 +49,7 @@ func UpdateCreate() {
 	println("create.sh: file updated to version " + strconv.Itoa(year) + "." + strconv.Itoa(int(quarter)) + "." + strconv.Itoa(int(monthInQuarter)))
 }
 
-func UpdateMain() {
+func updateMain() {
 	readFile, err := ioutil.ReadFile("main.go")
 	if err != nil {
 		println("Error reading main.go")
