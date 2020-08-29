@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-func HttpRouterAuthentication() {
+func httpRouterAuthentication() {
 	user := []byte("gordon")
 	pass := []byte("secret!")
 	router := httprouter.New()

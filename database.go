@@ -7,9 +7,10 @@ import (
 	"github.com/jackc/pgx/v4/pgxpool"
 	"os"
 )
+
 var pool *pgxpool.Pool
 
-func TestPgxDatabase() {
+func testPgxDatabase() {
 	var err error
 	pool, err = pgxpool.Connect(context.Background(), "postgres://postgres:Zps05.....@localhost:5432/version3")
 	if err != nil {

@@ -13,7 +13,7 @@ const (
 	slot      = 2
 )
 
-func Siemens() {
+func siemens() {
 	handler := gos7.NewTCPClientHandler(tcpDevice, rack, slot)
 	handler.Timeout = 10 * time.Second
 	handler.IdleTimeout = 10 * time.Second

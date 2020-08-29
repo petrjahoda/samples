@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func UpdateAndCreate() {
+func updateAndCreate() {
 	UpdateMain()
 	UpdateCreate()
 }

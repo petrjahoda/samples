@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func RompaRfidConverter() {
+func rompaRfidConverter() {
 	originalRFIDString := "ed0004b1ae"
 	var convertedString = MakeConversion(originalRFIDString)
 	println("result should be 186455 ")

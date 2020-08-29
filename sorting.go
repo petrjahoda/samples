@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func Sorting() {
+func sorting() {
 	max := 1000000
 	secondMax := 10000
 	var randomIntegers []string

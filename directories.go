@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func Directories() {
+func directories() {
 	// create directory even if exists
 	NewPath := filepath.Join(".", "public")
 	mkdirError := os.MkdirAll(NewPath, 0777)

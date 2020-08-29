@@ -23,7 +23,7 @@ func (p *program) Stop(s service.Service) error {
 	return nil
 }
 
-func ServiceTest() {
+func serviceTest() {
 	println("Program is starting")
 	serviceConfig := &service.Config{
 		Name:        "test",

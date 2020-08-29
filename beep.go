@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func Beep() {
+func beep() {
 	i := 0
 	for i < 3 {
 		err := beeep.Beep(beeep.DefaultFreq, beeep.DefaultDuration)

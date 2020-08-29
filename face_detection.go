@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func FaceDetectionHtmlWithStaticFilesAndHttpRouter() {
+func faceDetectionHtmlWithStaticFilesAndHttpRouter() {
 	router := httprouter.New()
 	router.ServeFiles("/face_detection/*filepath", http.Dir("face_detection"))
 	router.ServeFiles("/models/*filepath", http.Dir("face_detection/models"))

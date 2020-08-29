@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func Odata() {
+func odata() {
 	url, user, password := "http://AppNav.Likov.local:7348/LikovNAV90BetaTest/OData/Company('LIKOV%20s.r.o.')/ZAPSI_Order", "LIKOV\\SQL_NAV_SV", "SV-Likov01"
 	client := &http.Client{
 		Transport: ntlmssp.Negotiator{

@@ -2,7 +2,7 @@ package main
 
 import "os/exec"
 
-func Samba() {
+func samba() {
 	cmd := exec.Command("mkdir", "/home/data")
 	err := cmd.Run()
 	if err != nil {

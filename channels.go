@@ -11,7 +11,7 @@ var (
 	counter      sync.Mutex
 )
 
-func Channels() {
+func channels() {
 	channel := make(chan string)
 	go AddToChannel(1, channel)
 	go AddToChannel(2, channel)

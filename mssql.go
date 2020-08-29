@@ -5,7 +5,7 @@ import (
 	"gorm.io/gorm"
 )
 
-func Mssql() {
+func mssql() {
 	dsn := "sqlserver://sa:Zps05.....@localhost:1433?database=master"
 	_, err := gorm.Open(sqlserver.Open(dsn), &gorm.Config{})
 	if err != nil {

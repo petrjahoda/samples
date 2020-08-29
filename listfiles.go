@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 )
 
-func ListFilesInDirectory() {
+func listFilesInDirectory() {
 	var files []string
 	root := "./ipg"
 	err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
